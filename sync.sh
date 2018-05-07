@@ -4,7 +4,7 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )";
 
 #SOURCE CONFIG FILE
-. "$SCRIPT_DIR/config.sh";
+. "$SCRIPT_DIR/.config.sh";
 
 #BUILD EXCLUSION STRINGS
 FIND_EXCLUDE=();
