@@ -1,6 +1,6 @@
 # File Sync
 
-This bash script watches a directory for file modifications. It syncs these files to a remote server.    
+This bash script watches a directory for file modifications. It syncs these files to a remote server. This runs with no additional dependencies on Ubuntu. It may work just as well with OSX, but haven't tried.
 
 ## Installation
 
