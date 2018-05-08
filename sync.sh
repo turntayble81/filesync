@@ -50,8 +50,11 @@ while [ true ]; do
 
     #IF AT LEAST ONE RELEVANT FILE WAS CREATED/MODIFIED, RSYNC
     if [ ${#CHANGED_FILES[@]} -gt 0 ]; then
+        START_TIME=`stat -c %Y ${CHANGED_FILES[0]}`;
         echo "${#CHANGED_FILES[@]} file(s) changed. Syncing.";
         eval $RSYNC_CMD;
+        END_TIME=`date +%s`;
+        echo "Elapsed Time: $((END_TIME-START_TIME)) seconds";
     fi
 
     sleep $POLLING_TIME;
